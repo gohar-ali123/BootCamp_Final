@@ -1,0 +1,20 @@
+﻿@model Custom_HTML_Helper.Models.Employee
+@using Custom_HTML_Helper.CustomHtmlHelpers;
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<div class="card" style="margin: 2px,20px,2px,20px">
+    <div class="card-body">
+        <div style="width:200px">
+            @*<img style="width:50%" src="@Url.Content(@Model.emp_Image)" alt="@Model.alternate_Text`" />*@
+            <div width="50%">@Html.Image(@Model.emp_Image, @Model.alternate_Text)</div>
+        </div>
+        <h5><b>@Model.emp_Name</b></h5>
+        <p class="card-text"><b>City: </b>@Model.emp_City</p>
+        <p class="card-text"><b>Email: </b>@Model.emp_Email</p>
+    </div>
+</div>
+<p>Use this area to provide additional information.</p>
